@@ -15,7 +15,7 @@ const config = require(__dirname + "/config.js")
 
 console.log(process.env);
 const mongoUrl = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || config.mongodb.host + ':' + config.mongodb.port + '/' + config.mongodb.db;
-mongoose.connect(mongoUrl, { server: {poolSize: 1000}});
+mongoose.connect(mongoUrl, { server: {poolSize: 10}});
 
 app.use(cors());
 app.use(responseTime());
