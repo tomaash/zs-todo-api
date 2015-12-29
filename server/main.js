@@ -13,6 +13,7 @@ const env = process.env.NODE_ENV || 'development';
 // Load config for MongoDB and koa
 const config = require(__dirname + "/config.js")
 
+console.log(process.env);
 const mongoUrl = process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || config.mongodb.host + ':' + config.mongodb.port + '/' + config.mongodb.db;
 mongoose.connect(mongoUrl, { server: {poolSize: 1000}});
 
