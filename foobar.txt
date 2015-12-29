@@ -1,0 +1,4 @@
+foobar
+bozo-gozo
+bam!
+other
